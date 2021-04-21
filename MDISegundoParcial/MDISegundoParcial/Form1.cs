@@ -32,20 +32,7 @@ namespace MDISegundoParcial
 
         private void opcion1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (seguridad.PermisosAcceso("1306", txtUsuario.Text) == 1)
-            {
-                bit.user(txtUsuario.Text);
-                bit.insert("Ingreso al mantenimiento de usuarios", 2);
-                frmPrueba asignacion = new frmPrueba(txtUsuario.Text,this);
-                asignacion.MdiParent = this;
-                asignacion.Show();
-            }
-            else
-            {
-                bit.user(txtUsuario.Text);
-                bit.insert("Trato de ingresar al mantenimiento de usuarios", 2);
-                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
-            }
+           
         }
     }
 }
